@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movement : MonoBehaviour
+public class basicenemymovement : MonoBehaviour
 {
     public Transform playerposition;
     public Transform enemyposition;
