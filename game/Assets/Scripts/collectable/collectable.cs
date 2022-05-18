@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class collect : MonoBehaviour
+public class collectable : MonoBehaviour
 {
     public Transform collectablepostition;
     // Start is called before the first frame update
