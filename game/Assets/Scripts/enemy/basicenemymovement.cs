@@ -5,7 +5,6 @@ using UnityEngine;
 public class basicenemymovement : MonoBehaviour
 {
     public Transform playerPosition;
-
     public Rigidbody2D rb;
     public float speed;
     public float minRadius;
@@ -24,34 +23,39 @@ public class basicenemymovement : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        positions();
 
-    }
     private void FixedUpdate()
     {
+
         targetingMovement();
     }
-    void positions() {
+
+    public void mainMovement() {
         playerPositionv = playerPosition.transform.position;
-    }
-    void targetingMovement() {
-        //transform.position = Vector2.MoveTowards(enemypositionv, playerpositionv, speed * Time.deltaTime);
         //distanzvektor
         distance.x = playerPositionv.x - transform.position.x;
         distance.y = playerPositionv.y - transform.position.y;
-        radiusDistance = Mathf.Sqrt(distance.x * distance.x + distance.y * distance.y);
-        distance.Normalize();
-        //Bewegung
-        if (radiusDistance < MaxRadius && radiusDistance > minRadius) {
-            rb.MovePosition(rb.position + distance * speed * Time.deltaTime);
 
+        if (radiusDistance < MaxRadius && radiusDistance > minRadius)
+        {
+            targetingMovement();
         }
-        if (radiusDistance > MaxRadius) {
+        else { 
+            idleMovement(); 
+        
+        }
+        if (radiusDistance > MaxRadius)
+        {
             returnToSpawn();
         }
+
+
+    }
+
+    private void targetingMovement() {
+        radiusDistance = Mathf.Sqrt(distance.x * distance.x + distance.y * distance.y);
+        distance.Normalize();
+        rb.MovePosition(rb.position + distance * speed * Time.deltaTime);
 
 
         //debug line
@@ -63,12 +67,21 @@ public class basicenemymovement : MonoBehaviour
         distanceToSpawnN = distanceToSpawn;
         distanceToSpawnN.Normalize();
         if (rb.position != spawnPosition) {
-            
             rb.MovePosition(rb.position + distanceToSpawnN * speed * Time.deltaTime);
         }
         if (distanceToSpawn.magnitude < 0.1) {
             transform.position = spawnPosition;
         }
+
+    }
+    private void idleMovement() {
+        StartCoroutine(cooldownIdleMovement());
+        
+
+    }
+    IEnumerator cooldownIdleMovement()
+    {
+        yield return new WaitForSeconds(Random.Range(3f,10f));
 
     }
 
