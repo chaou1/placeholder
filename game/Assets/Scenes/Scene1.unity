@@ -464,6 +464,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1451669221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7622343800143960352, guid: bf444206b530fc445a27118f4deac93a, type: 3}
+  m_PrefabInstance: {fileID: 7622343800884917562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1807972863
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +590,19 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 7622343800143960346, guid: bf444206b530fc445a27118f4deac93a, type: 3}
   m_PrefabInstance: {fileID: 7622343800884917562}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1826499614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451669221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f18830b2c6d6ed9499da458ec12905f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerposition: {fileID: 0}
 --- !u!1 &2003925938
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +649,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 4.2616277, y: 1}
+    m_SensorSize: {x: 2.1233141, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -672,7 +690,7 @@ GameObject:
   - component: {fileID: 2109742396}
   m_Layer: 0
   m_Name: collactable
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
