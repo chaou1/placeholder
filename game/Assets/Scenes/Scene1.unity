@@ -619,7 +619,7 @@ MonoBehaviour:
   playerPosition: {fileID: 1826499612}
   rb: {fileID: 0}
   projectileCooldown: 0
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 519420031}
 --- !u!1 &2003925938
 GameObject:
   m_ObjectHideFlags: 0
