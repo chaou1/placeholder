@@ -21,7 +21,7 @@ public class playerattack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mouse = Input.mousePosition;
+    
         if (Input.GetKey(KeyCode.Space) && projectileCooldown == false)
         {
             StartCoroutine(attack());
