@@ -146,6 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddad85123710d7a40a06e54f954b129e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 15
   rb: {fileID: 2964486195503009624}
   currentdistance: {x: 0, y: 0}
+  test: 0
+  deathTime: 2

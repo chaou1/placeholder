@@ -26,7 +26,7 @@ public class BasicMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.F) && dashCooldown == false )
+        if (Input.GetKeyDown(KeyCode.LeftControl) && dashCooldown == false )
         {
             StartCoroutine(dash()); 
         }

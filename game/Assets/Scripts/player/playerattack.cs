@@ -9,6 +9,7 @@ public class playerattack : MonoBehaviour
     public Transform playerPosition;
     public static Vector2 distance = new Vector2();
     public Rigidbody2D rb;
+    public float attackCooldown;
     public bool projectileCooldown = false;
     [SerializeField] private Camera mainCamera;
     enum attatckstate {attack};
@@ -34,7 +35,7 @@ public class playerattack : MonoBehaviour
         rb = projectiles.GetComponent<Rigidbody2D>();
         projectilePath();
         projectileCooldown = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(attackCooldown);
         projectileCooldown = false;
     }
     void projectilePath()

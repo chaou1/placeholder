@@ -177,7 +177,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -652,7 +652,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1807972863
 GameObject:
@@ -804,6 +804,7 @@ MonoBehaviour:
   mouse: {x: 0, y: 0, z: 0}
   playerPosition: {fileID: 1826499612}
   rb: {fileID: 0}
+  attackCooldown: 0.3
   projectileCooldown: 0
   mainCamera: {fileID: 519420031}
 --- !u!1 &2003925938
@@ -845,14 +846,14 @@ MonoBehaviour:
   m_Follow: {fileID: 1826499612}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0465117, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1122,7 +1123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7622343800143960359, guid: bf444206b530fc445a27118f4deac93a, type: 3}
       propertyPath: dashDistance
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7622343800143960359, guid: bf444206b530fc445a27118f4deac93a, type: 3}
       propertyPath: playerPosition
