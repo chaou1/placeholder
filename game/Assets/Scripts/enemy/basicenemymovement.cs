@@ -15,6 +15,8 @@ public class basicenemymovement : MonoBehaviour
     private Vector2 spawnPosition = new Vector2();
     private Vector2 distanceToSpawn;
     private Vector2 distanceToSpawnN;
+    private bool idle = true;
+    public Vector2 randomNoise;
 
     // Start is called before the first frame update
     void Start()
@@ -39,11 +41,11 @@ public class basicenemymovement : MonoBehaviour
 
         if (radiusDistance < MaxRadius && radiusDistance > minRadius)
         {
+            idle = false;
             targetingMovement();
         }
-        else { 
-            idleMovement(); 
-        
+        else {
+            idle = true;
         }
         if (radiusDistance > MaxRadius)
         {
@@ -76,13 +78,21 @@ public class basicenemymovement : MonoBehaviour
 
     }
     private void idleMovement() {
-        StartCoroutine(cooldownIdleMovement());
-        
+
+        while (idle == true)
+        {
+            StartCoroutine(cooldownIdleMovement());
+            rb.position = spawnPosition;
+        }
 
     }
     IEnumerator cooldownIdleMovement()
     {
-        yield return new WaitForSeconds(Random.Range(3f,10f));
+
+        yield return new WaitForSeconds(Random.Range(5f,13f));
+        randomNoise.x = Random.Range(0, 3);
+        randomNoise.y = Random.Range(0, 3);
+        rb.MovePosition(rb.position + randomNoise * speed * Time.deltaTime);
 
     }
 
