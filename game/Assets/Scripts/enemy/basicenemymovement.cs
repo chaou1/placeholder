@@ -9,9 +9,11 @@ public class basicenemymovement : MonoBehaviour
     public Rigidbody2D rb;
     public float speed;
     private Vector2 playerPositionv = new Vector2();
-   
+    public float minRadius;
+    public float MaxRadius;
 
     public Vector2 distance = new Vector2();
+    public float radiusDistance;
     public float test;
     
 
@@ -35,10 +37,11 @@ public class basicenemymovement : MonoBehaviour
         //distanzvektor
         distance.x = playerPositionv.x - transform.position.x;
         distance.y = playerPositionv.y - transform.position.y;
+        radiusDistance = Mathf.Sqrt(distance.x * distance.x + distance.y * distance.y);
         distance.Normalize();
         //Bewegung
-        rb.MovePosition(rb.position + distance * speed * Time.deltaTime);
-
+        if (radiusDistance<MaxRadius|| radiusDistance>minRadius) { rb.MovePosition(rb.position + distance * speed * Time.deltaTime);
+        }
         //debug line
         Debug.DrawLine(transform.position, playerPositionv);
         

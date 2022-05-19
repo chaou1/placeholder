@@ -438,7 +438,10 @@ MonoBehaviour:
   playerPosition: {fileID: 1826499612}
   rb: {fileID: 891978971}
   speed: 3
+  minRadius: 1
+  MaxRadius: 3
   distance: {x: 0, y: 0}
+  radiusDistance: 0
   test: 0
 --- !u!50 &891978971
 Rigidbody2D:
