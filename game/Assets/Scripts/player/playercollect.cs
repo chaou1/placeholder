@@ -23,7 +23,7 @@ public class playercollect : MonoBehaviour
     {
         if (collision.CompareTag("Collectable"))
         {
-           print("Item erhalten!")
+            print("Item erhalten!");
               
         }
     }
