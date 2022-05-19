@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class playercollect : MonoBehaviour
 {
+   // public Transform collectablepostition;
+    public Transform playerposition;
+    
+    static ArrayList Items = new ArrayList();
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +17,16 @@ public class playercollect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Collectable"))
+        {
+           print("Item erhalten!")
+              
+        }
+    }
+
+
 }
