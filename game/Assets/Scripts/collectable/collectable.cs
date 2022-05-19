@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class collectable : MonoBehaviour
-{   
+{
+    int x = 0;
+    float y = 0.005f;
     public Transform collectablepostition;
     public Transform playerposition;
     // Start is called before the first frame update
@@ -16,11 +18,23 @@ public class collectable : MonoBehaviour
     void Update()
     {
         
-        collectablepostition.position += new Vector3(0.005f, 0, 0);
-      
-       
+        collectablepostition.position += new Vector3(y, 0, 0);
+        x++;
+        if (x == 100) {
+            y = -y;
+            x = 0;
+        }
 
+
+       
     }
-    
- 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+           Destroy(obj: gameObject);
+        }
+    }
+
+
 }
