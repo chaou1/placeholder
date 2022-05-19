@@ -14,7 +14,8 @@ public class basicenemymovement : MonoBehaviour
     public float radiusDistance;
     private Vector2 playerPositionv = new Vector2();
     private Vector2 spawnPosition = new Vector2();
-    
+    private Vector2 distanceToSpawn;
+    private Vector2 distanceToSpawnN;
 
     // Start is called before the first frame update
     void Start()
@@ -58,10 +59,15 @@ public class basicenemymovement : MonoBehaviour
 
     }
     private void returnToSpawn()
-    { 
+    { distanceToSpawn = spawnPosition - rb.position;
+        distanceToSpawnN = distanceToSpawn;
+        distanceToSpawnN.Normalize();
         if (rb.position != spawnPosition) {
             
-            rb.MovePosition(rb.position + (spawnPosition - rb.position) * speed/2 * Time.deltaTime);
+            rb.MovePosition(rb.position + distanceToSpawnN * speed * Time.deltaTime);
+        }
+        if (distanceToSpawn.magnitude < 0.1) {
+            transform.position = spawnPosition;
         }
 
     }
