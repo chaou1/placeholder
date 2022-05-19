@@ -602,6 +602,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerposition: {fileID: 0}
+--- !u!114 &1826499615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451669221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c482f8bf165e78479d0f41f6f6c6c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1774894327741179554, guid: d889d5a997a17014b9b6be3a4bdb6cdc, type: 3}
+  mouse: {x: 0, y: 0, z: 0}
+  playerPosition: {fileID: 1826499612}
+  rb: {fileID: 0}
+  projectileCooldown: 0
+  mainCamera: {fileID: 0}
 --- !u!1 &2003925938
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,7 +666,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1233141, y: 1}
+    m_SensorSize: {x: 4.5804687, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

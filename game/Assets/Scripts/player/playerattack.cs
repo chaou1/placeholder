@@ -5,11 +5,12 @@ using UnityEngine;
 public class playerattack : MonoBehaviour
 {
     public GameObject projectile;
-    public float speed;
+    public Vector3 mouse ;
     public Transform playerPosition;
-    public Vector2 distance = new Vector2();
+    public static Vector2 distance = new Vector2();
     public Rigidbody2D rb;
     public bool projectileCooldown = false;
+    [SerializeField] private Camera mainCamera;
     enum attatckstate {attack};
     // Start is called before the first frame update
     void Start()
@@ -20,11 +21,12 @@ public class playerattack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        mouse = Input.mousePosition;
         if (Input.GetKey(KeyCode.Space) && projectileCooldown == false)
         {
             StartCoroutine(attack());
-        } 
+        }
+      
     }
     IEnumerator attack() 
     {
@@ -37,11 +39,13 @@ public class playerattack : MonoBehaviour
     }
     void projectilePath()
     {
+        Vector3 mouseworldposition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        mouseworldposition.z = 0f;
         //bullet path
-        distance.x = Input.mousePosition.x - transform.position.x;
-        distance.y = Input.mousePosition.y - transform.position.y;
+        distance.x = mouseworldposition.x - transform.position.x;
+        distance.y = mouseworldposition.y - transform.position.y;
         distance.Normalize();
-        rb.MovePosition(rb.position + distance * speed * Time.deltaTime);
+       
         Debug.DrawLine(transform.position, Input.mousePosition);
     }
     
