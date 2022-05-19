@@ -12,11 +12,12 @@ public class basicenemymovement : MonoBehaviour
     public Vector2 distance = new Vector2();
     public float radiusDistance;
     private Vector2 playerPositionv = new Vector2();
-    private Vector2 spawnPosition = new Vector2();
+    public Vector2 spawnPosition = new Vector2();
     private Vector2 distanceToSpawn;
     private Vector2 distanceToSpawnN;
-    private bool idle = true;
-    public Vector2 randomNoise;
+    public bool idle = true;
+    //public bool idleMovementokay=true;
+    //public Vector2 randomNoise= new Vector2();
 
     // Start is called before the first frame update
     void Start()
@@ -45,11 +46,12 @@ public class basicenemymovement : MonoBehaviour
             targetingMovement();
         }
         else {
-            idle = true;
+            //idleMovement();
         }
-        if (radiusDistance > MaxRadius)
+        if (radiusDistance > MaxRadius&& idle ==false)
         {
             returnToSpawn();
+            
         }
 
 
@@ -74,27 +76,33 @@ public class basicenemymovement : MonoBehaviour
         }
         if (distanceToSpawn.magnitude < 0.1) {
             transform.position = spawnPosition;
+            idle = true;
         }
 
     }
-    private void idleMovement() {
+    //private void idleMovement() {
 
-        while (idle == true)
-        {
-            StartCoroutine(cooldownIdleMovement());
-            rb.position = spawnPosition;
-        }
-
-    }
-    IEnumerator cooldownIdleMovement()
-    {
-
-        yield return new WaitForSeconds(Random.Range(5f,13f));
-        randomNoise.x = Random.Range(0, 3);
-        randomNoise.y = Random.Range(0, 3);
-        rb.MovePosition(rb.position + randomNoise * speed * Time.deltaTime);
-
-    }
+    //    if (idleMovementokay == true && idle ==true)
+    //    {
+    //        idleMovementokay = true;
+    //        StartCoroutine(cooldownIdleMovement());
+            
+            
+    //    }
+    //    if (idle == true) { 
+    //    }
+    //}
+    //IEnumerator cooldownIdleMovement()
+    //{
+    //    if (idleMovementokay == true) { 
+    //    randomNoise.x = Random.Range(0, 2);
+    //    randomNoise.y = Random.Range(0, 2);
+    //        randomNoise.Normalize();
+    //        rb.MovePosition(rb.position + randomNoise * speed / 2 * Time.deltaTime);
+    //        yield return new WaitForSeconds(5f);
+    //    idleMovementokay = false;
+    //}
+    //}
 
 
 }
