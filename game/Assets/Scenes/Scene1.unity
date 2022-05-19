@@ -438,6 +438,8 @@ MonoBehaviour:
   enemyposition: {fileID: 891978969}
   playerpositionv: {x: 0, y: 0}
   enemypositionv: {x: 0, y: 0}
+  distance: {x: 0, y: 0}
+  test: 0
 --- !u!1 &1807972863
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +556,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7622343800143960358, guid: bf444206b530fc445a27118f4deac93a, type: 3}
   m_PrefabInstance: {fileID: 7622343800884917562}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1826499613 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7622343800143960346, guid: bf444206b530fc445a27118f4deac93a, type: 3}
+  m_PrefabInstance: {fileID: 7622343800884917562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2003925938
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,7 +607,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0910816, y: 1}
+    m_SensorSize: {x: 4.5804687, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -796,6 +803,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7622343800143960346, guid: bf444206b530fc445a27118f4deac93a, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7622343800143960352, guid: bf444206b530fc445a27118f4deac93a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -852,5 +863,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7622343800143960359, guid: bf444206b530fc445a27118f4deac93a, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1826499613}
+    - target: {fileID: 7622343800143960359, guid: bf444206b530fc445a27118f4deac93a, type: 3}
+      propertyPath: normalSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622343800143960359, guid: bf444206b530fc445a27118f4deac93a, type: 3}
+      propertyPath: sprintSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622343800143960359, guid: bf444206b530fc445a27118f4deac93a, type: 3}
+      propertyPath: dashDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622343800143960359, guid: bf444206b530fc445a27118f4deac93a, type: 3}
+      propertyPath: playerPosition
+      value: 
+      objectReference: {fileID: 1826499612}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf444206b530fc445a27118f4deac93a, type: 3}
