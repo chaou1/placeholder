@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class basicenemymovement : MonoBehaviour
 {
-    public Transform playerposition;
-    public Transform enemyposition;
-    public Vector2 playerpositionv = new Vector2();
-    public Vector2 enemypositionv = new Vector2();
+    public Transform playerPosition;
+
+    public Rigidbody2D rb;
+    public float speed;
+    private Vector2 playerPositionv = new Vector2();
+   
+
     public Vector2 distance = new Vector2();
     public float test;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -20,17 +24,24 @@ public class basicenemymovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        positions();
-        BasicMovement();
+       positions();
+        targetingMovement();
     }
      void positions() {
-        playerpositionv = playerposition.transform.position;
-        enemypositionv = enemyposition.transform.position;
+        playerPositionv = playerPosition.transform.position;
     }
-    void BasicMovement() {
-        distance.x = playerpositionv.x - enemypositionv.x;
-        distance.y = playerpositionv.y - enemypositionv.y;
-        test = Mathf.Sqrt(distance.x * distance.x + distance.y * distance.y);
+    void targetingMovement() {
+        //transform.position = Vector2.MoveTowards(enemypositionv, playerpositionv, speed * Time.deltaTime);
+        //distanzvektor
+        distance.x = playerPositionv.x - transform.position.x;
+        distance.y = playerPositionv.y - transform.position.y;
+        distance.Normalize();
+        //Bewegung
+        rb.MovePosition(rb.position + distance * speed * Time.deltaTime);
+
+        //debug line
+        Debug.DrawLine(transform.position, playerPositionv);
+        
 
     
 
