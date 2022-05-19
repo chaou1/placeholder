@@ -27,7 +27,7 @@ public class basicenemymovement : MonoBehaviour
     private void FixedUpdate()
     {
 
-        targetingMovement();
+        mainMovement();
     }
 
     public void mainMovement() {
@@ -35,6 +35,7 @@ public class basicenemymovement : MonoBehaviour
         //distanzvektor
         distance.x = playerPositionv.x - transform.position.x;
         distance.y = playerPositionv.y - transform.position.y;
+        radiusDistance = Mathf.Sqrt(distance.x * distance.x + distance.y * distance.y);
 
         if (radiusDistance < MaxRadius && radiusDistance > minRadius)
         {
@@ -53,7 +54,7 @@ public class basicenemymovement : MonoBehaviour
     }
 
     private void targetingMovement() {
-        radiusDistance = Mathf.Sqrt(distance.x * distance.x + distance.y * distance.y);
+
         distance.Normalize();
         rb.MovePosition(rb.position + distance * speed * Time.deltaTime);
 
