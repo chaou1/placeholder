@@ -13,7 +13,7 @@ public class BasicMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.Get )
+        if(Input.GetKey(KeyCode.W))
         {
             playerposition.position += new Vector3(0, 0.01f ,0);
         }
@@ -30,6 +30,6 @@ public class BasicMovement : MonoBehaviour
             playerposition.position += new Vector3(0.01f, 0,0);
         }
     }
-    Oncoll
+    
     
 }
