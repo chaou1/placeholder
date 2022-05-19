@@ -25,12 +25,15 @@ public class collectable : MonoBehaviour
        
 
     }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player" )) {
             print("KONFLIKT!!!!!");
         }
     }
+    
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Player")
@@ -38,6 +41,6 @@ public class collectable : MonoBehaviour
             print("KONFLIKT!!!!!");
         }
 
-    }
-
+    } 
+    */
 }
