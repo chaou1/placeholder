@@ -23,7 +23,6 @@ public class basicenemymovement : MonoBehaviour
     void Start()
     {
         spawnPosition = rb.position;
-
     }
 
 
