@@ -439,10 +439,9 @@ MonoBehaviour:
   rb: {fileID: 891978971}
   speed: 3
   minRadius: 1
-  MaxRadius: 3
+  MaxRadius: 10
   distance: {x: 0, y: 0}
   radiusDistance: 0
-  test: 0
 --- !u!50 &891978971
 Rigidbody2D:
   serializedVersion: 4
@@ -631,7 +630,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 4.2616277, y: 1}
+    m_SensorSize: {x: 4.258721, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

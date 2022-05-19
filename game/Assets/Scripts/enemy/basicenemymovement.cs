@@ -8,28 +8,32 @@ public class basicenemymovement : MonoBehaviour
 
     public Rigidbody2D rb;
     public float speed;
-    private Vector2 playerPositionv = new Vector2();
     public float minRadius;
     public float MaxRadius;
-
     public Vector2 distance = new Vector2();
     public float radiusDistance;
-    public float test;
+    private Vector2 playerPositionv = new Vector2();
+    private Vector2 spawnPosition = new Vector2();
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        spawnPosition = rb.position;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       positions();
+        positions();
+
+    }
+    private void FixedUpdate()
+    {
         targetingMovement();
     }
-     void positions() {
+    void positions() {
         playerPositionv = playerPosition.transform.position;
     }
     void targetingMovement() {
@@ -40,14 +44,28 @@ public class basicenemymovement : MonoBehaviour
         radiusDistance = Mathf.Sqrt(distance.x * distance.x + distance.y * distance.y);
         distance.Normalize();
         //Bewegung
-        if (radiusDistance<MaxRadius|| radiusDistance>minRadius) { rb.MovePosition(rb.position + distance * speed * Time.deltaTime);
+        if (radiusDistance < MaxRadius && radiusDistance > minRadius) {
+            rb.MovePosition(rb.position + distance * speed * Time.deltaTime);
+
         }
+        if (radiusDistance > MaxRadius) {
+            returnToSpawn();
+        }
+
+
         //debug line
         Debug.DrawLine(transform.position, playerPositionv);
-        
 
-    
+    }
+    private void returnToSpawn()
+    { 
+        if (rb.position != spawnPosition) {
+            
+            rb.MovePosition(rb.position + (spawnPosition - rb.position) * speed/2 * Time.deltaTime);
+        }
 
     }
 
+
 }
+
