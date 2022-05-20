@@ -7,6 +7,7 @@ public class roomSpawner : MonoBehaviour
     public int openingDirection;
     public roomTemplates roomtemplate;
     private int rand;
+    public bool spawned = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,24 +18,26 @@ public class roomSpawner : MonoBehaviour
     // Update is called once per frame
     void Spawn()
     {
-        switch (openingDirection) 
-        {
-            case 1:
-                rand = Random.Range(0, roomtemplate.roomT.Length);
-                Instantiate(roomtemplate.roomT[rand], transform.position, Quaternion.identity);
-                break;
-            case 2:
-                rand = Random.Range(0, roomtemplate.roomR.Length);
-                Instantiate(roomtemplate.roomR[rand], transform.position, Quaternion.identity);
-                break;
-            case 3:
-                rand = Random.Range(0, roomtemplate.roomD.Length);
-                Instantiate(roomtemplate.roomD[rand], transform.position, Quaternion.identity);
-                break;
-            case 4:
-                rand = Random.Range(0, roomtemplate.roomL.Length);
-                Instantiate(roomtemplate.roomL[rand], transform.position, Quaternion.identity);
-                break;
+        if (spawned == false) {  switch (openingDirection)
+            {
+                case 1:
+                    rand = Random.Range(0, roomtemplate.roomT.Length);
+                    Instantiate(roomtemplate.roomT[rand], transform.position, Quaternion.identity);
+                    break;
+                case 2:
+                    rand = Random.Range(0, roomtemplate.roomR.Length);
+                    Instantiate(roomtemplate.roomR[rand], transform.position, Quaternion.identity);
+                    break;
+                case 3:
+                    rand = Random.Range(0, roomtemplate.roomD.Length);
+                    Instantiate(roomtemplate.roomD[rand], transform.position, Quaternion.identity);
+                    break;
+                case 4:
+                    rand = Random.Range(0, roomtemplate.roomL.Length);
+                    Instantiate(roomtemplate.roomL[rand], transform.position, Quaternion.identity);
+                    break;
+            }
+            spawned = true;
         }
     }
 }
