@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: bone
   m_EditorClassIdentifier: Assembly-CSharp::Default
-  prefab: {fileID: 0}
+  prefab: {fileID: 6288432604739786858, guid: 7a3b132a170624f48a1cf2b1ebc87a18, type: 3}
   type: 1
   description: 
