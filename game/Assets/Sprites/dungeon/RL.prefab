@@ -408,6 +408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8483343db1e945948a80785fbe7da7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openingDirection: 4
+  roomtemplate: {fileID: 0}
 --- !u!1 &6190615014142536760
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8483343db1e945948a80785fbe7da7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openingDirection: 2
+  roomtemplate: {fileID: 0}
 --- !u!1 &6512929436820829506
 GameObject:
   m_ObjectHideFlags: 0
