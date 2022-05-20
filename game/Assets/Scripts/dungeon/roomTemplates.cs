@@ -9,9 +9,6 @@ public class roomTemplates : MonoBehaviour
     public GameObject[] roomD;
     public GameObject[] roomL;
 
-    private void Start()
-    {
-        Time.timeScale = 0.1f;
-    }
+   
 }
 
