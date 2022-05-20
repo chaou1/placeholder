@@ -753,7 +753,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.57, y: 0.98, z: -10}
+  m_LocalPosition: {x: 3.45, y: 0.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1178,7 +1178,7 @@ GameObject:
   - component: {fileID: 853041761}
   - component: {fileID: 853041760}
   m_Layer: 5
-  m_Name: Titel
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1760,7 +1760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1487850015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2175,8 +2175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6f3be634962d045b1bd2a6b0259281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
-  inContact: 0
+  inventory: {fileID: 11400000, guid: f56773117e78dce41bfbe9604349edad, type: 2}
+  inContact: 1
 --- !u!1001 &1999157320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2325,7 +2325,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 2.2826476, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2342,7 +2342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003925938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.57, y: 0.98, z: -10}
+  m_LocalPosition: {x: 3.45, y: 0.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2557,7 +2557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f2b9e33d900f848a5db04cf751f045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerinteraction: {fileID: 0}
   collectablepostition: {fileID: 2109742392}
   playerposition: {fileID: 1826499612}
 --- !u!114 &2109742394
@@ -2761,11 +2760,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7622343800143960358, guid: bf444206b530fc445a27118f4deac93a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.57
+      value: 3.45
       objectReference: {fileID: 0}
     - target: {fileID: 7622343800143960358, guid: bf444206b530fc445a27118f4deac93a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.98
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7622343800143960358, guid: bf444206b530fc445a27118f4deac93a, type: 3}
       propertyPath: m_LocalPosition.z

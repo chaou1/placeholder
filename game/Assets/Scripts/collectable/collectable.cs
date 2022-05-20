@@ -5,14 +5,11 @@ using UnityEngine;
 public class collectable : MonoBehaviour
 {
 
-   public  PlayerInteraction playerinteraction;
-
-   // 
     int x = 0;
     float y = 0.005f;
     public Transform collectablepostition;
     public Transform playerposition;
-   //public  Interactable interactable;
+  
     // Start is called before the first frame update
     void Start()
     {
