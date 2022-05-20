@@ -9,31 +9,21 @@ public class dialogsystem : MonoBehaviour
     public GameObject DialogBox;
     public TMP_Text dialogText;
     public string contents = "if u see dis then its wrong";
-    private bool inrange= false;
+    public bool inrange= false;
     public int timespoken=0;
     public bool doneSpeaking=true;
-    private Queue<string> dialogs;
+    //private Queue<string> dialogs;
 
 
-    private float lol;
+ 
  
     // Start is called before the first frame update
 
     private void Start()
     {
-        dialogs = new Queue<string>();
+        //dialogs = new Queue<string>();
     }
-    private void Update()
-    {
-        if (BasicMovement.devtools == true) {
-            lol = 0f;
-        }
-        if (BasicMovement.devtools == false)
-        {
-            lol = 1f;
-        }
 
-    } 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -49,12 +39,15 @@ public class dialogsystem : MonoBehaviour
 
         }
     }
-    public virtual void dialog() {
+
+
+    public  void dialog() {
 
         if (inrange == true && Input.GetKeyDown(KeyCode.F)&& doneSpeaking==true)
         {
             BasicMovement.frozen = true;
             DialogBox.SetActive(true);
+            //dialogs.Clear();
             Text();
             StartCoroutine(dialogSpamCooldown());
             dialogText.text = contents;
@@ -65,11 +58,12 @@ public class dialogsystem : MonoBehaviour
         
     }
     protected virtual void Text() {
+
         contents = "if u see dis then its wrong";
         timespoken++;
     }
     IEnumerator dialogSpamCooldown() {
-        yield return new WaitForSeconds(lol);
+        yield return new WaitForSeconds(1);
     }
     void finishDialog() {
         BasicMovement.frozen = false;

@@ -4,8 +4,10 @@ using UnityEngine;
 [System.Serializable]
 public class npcScript : dialogsystem
 {
-
-    public int Howmuch;
+    public string name;
+    [TextArea(3,10)]
+    public string[] sentences;
+  
   
     
     // Start is called before the first frame update
@@ -22,7 +24,6 @@ public class npcScript : dialogsystem
     }
     protected override void Text()
     {
-        //contents = dialogs[timespoken];
-      
+        contents = sentences[timespoken];
     }
 }

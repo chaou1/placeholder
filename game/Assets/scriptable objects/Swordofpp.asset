@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7587520a7de5642a15c816d05f5d04, type: 3}
   m_Name: Swordofpp
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1774894327741179554, guid: d889d5a997a17014b9b6be3a4bdb6cdc, type: 3}
+  prefab: {fileID: 4171129746333007581, guid: 619685d663592124bb5ae0c0fadb4094, type: 3}
   type: 2
   description: 
   bonus: 100

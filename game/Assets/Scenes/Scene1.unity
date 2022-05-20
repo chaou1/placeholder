@@ -1765,7 +1765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1487850015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2000,9 +2000,13 @@ MonoBehaviour:
   DialogBox: {fileID: 940035187}
   dialogText: {fileID: 162500903}
   contents: if u see dis then its wrong
+  inrange: 0
   timespoken: 0
   doneSpeaking: 1
-  Howmuch: 0
+  name: 
+  sentences:
+  - hallo
+  - 
 --- !u!61 &1791073563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2181,6 +2185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6f3be634962d045b1bd2a6b0259281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  focus: {fileID: 0}
   inventory: {fileID: 11400000, guid: f56773117e78dce41bfbe9604349edad, type: 2}
   inContact: 1
 --- !u!1001 &1999157320
@@ -2331,7 +2336,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 5.3407474, y: 1}
+    m_SensorSize: {x: 2.2826476, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2639,7 +2644,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8501b39c54a8b554fa1200ee0f54b12f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 5
+  player: {fileID: 1826499612}
+  collectable: {fileID: 2109742392}
 --- !u!1001 &1581856057550869678
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    public Interactable focus;
     public InventoryObject inventory;   
     public bool inContact;
     Camera cam;
@@ -17,17 +18,31 @@ public class PlayerInteraction : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(1) ) {
+            RaycastHit2D rayHit = Physics2D.GetRayIntersection(cam.ScreenPointToRay(Input.mousePosition));
 
-            
-              
-            
+            if (rayHit.transform.CompareTag("Collectable"))
+            {
+                Interactable interactable = rayHit.transform.GetComponent<Interactable>();
+                if (interactable != null)
+                {
+                    RemoveFocus();
+                }
+                //Debug.Log(rayHit.transform.tag);
+               
+            }
+
         }
         if (Input.GetMouseButtonDown(0)) {
             RaycastHit2D rayHit = Physics2D.GetRayIntersection(cam.ScreenPointToRay(Input.mousePosition));
             if (rayHit.transform.CompareTag("Collectable"))
             {
-                Debug.Log(rayHit.transform.tag);
-                inContact = true;
+                Interactable interactable = rayHit.transform.GetComponent<Interactable>();
+                if (interactable != null)
+                {
+                    SetFocus(interactable);
+                }
+                //Debug.Log(rayHit.transform.tag);
+               
             }
         }
     }
@@ -36,6 +51,7 @@ public class PlayerInteraction : MonoBehaviour
         var item = other.GetComponent<Item>();
         if (item)  //other.GetComponent<Item>() auch möglich  other.CompareTag("Collectable")
         {
+          
             inventory.AddItem(item.item, 1);
             Debug.Log(item.name);
             Destroy(other.gameObject);
@@ -44,6 +60,20 @@ public class PlayerInteraction : MonoBehaviour
     private void OnApplicationQuit()
     {
         inventory.Container.Clear();
+    }
+    void SetFocus(Interactable newFocus)
+    {
+        if (newFocus != focus)
+        {
+            focus.DeFocused();
+        }
+        focus = newFocus;
+        newFocus.OnFocused(transform);
+    }
+    void RemoveFocus()
+    {
+        focus.DeFocused();
+        focus = null;
     }
 }
 
