@@ -8,7 +8,7 @@ public class roomTemplates : MonoBehaviour
     public GameObject[] roomR;
     public GameObject[] roomD;
     public GameObject[] roomL;
-
+    public GameObject closedroom;
    
 }
 
