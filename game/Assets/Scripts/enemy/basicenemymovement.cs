@@ -93,12 +93,10 @@ public class basicenemymovement : MonoBehaviour
 
         if (idleCooldown == false) { 
             switch (Random.Range(0, HowLittleIdle )) {
-                case 1:
+                case 0:
                     StartCoroutine(noise());
                     break;
-                case 0:
-                    StartCoroutine(nothing());
-                    break;
+
                 default:
                     StartCoroutine(nothing());
                     break;
@@ -122,7 +120,7 @@ public class basicenemymovement : MonoBehaviour
     }
     IEnumerator nothing() {
         idleCooldown = true;
-        yield return new WaitForSeconds(Random.Range(3f, 5f));
+        yield return new WaitForSeconds(Random.Range(2f, 4f));
         idleCooldown = false;
     }
  
