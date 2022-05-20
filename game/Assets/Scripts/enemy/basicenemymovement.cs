@@ -8,7 +8,7 @@ public class basicenemymovement : MonoBehaviour
     public Rigidbody2D rb;
     //speed of the enemy
     public float speed;
-    //range of the 
+    //range of the target
     public float MaxRadius;
     private Vector2 distance = new Vector2();
     public float radiusDistance;
@@ -19,7 +19,7 @@ public class basicenemymovement : MonoBehaviour
     private bool idle = true;
     private bool idleCooldown = false;
     private bool canPerform = false;
-    public float HowLittleIdle;
+    public int HowLittleIdle;
     public Vector2 random;
 
 
@@ -92,9 +92,12 @@ public class basicenemymovement : MonoBehaviour
     private void idleMovement() {
 
         if (idleCooldown == false) { 
-            switch (Random.Range(1,HowLittleIdle)) {
+            switch (Random.Range(0, HowLittleIdle )) {
                 case 1:
                     StartCoroutine(noise());
+                    break;
+                case 0:
+                    StartCoroutine(nothing());
                     break;
                 default:
                     StartCoroutine(nothing());
