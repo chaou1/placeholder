@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class npcScript : MonoBehaviour
+public class npcScript : dialogsystem
 {
 
     
@@ -17,4 +17,5 @@ public class npcScript : MonoBehaviour
     {
         
     }
+    
 }
