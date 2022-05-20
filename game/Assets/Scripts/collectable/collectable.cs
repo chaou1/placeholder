@@ -33,6 +33,7 @@ public class collectable : MonoBehaviour
 
        
     }
+   /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && playerinteraction.inContact == true)
@@ -41,5 +42,5 @@ public class collectable : MonoBehaviour
         }
     }
 
-
+    */
 }
