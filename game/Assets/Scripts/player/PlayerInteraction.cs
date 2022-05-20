@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    public InventoryObject inventory;
+    
+    
     public bool inContact;
-
     Camera cam;
     collectable collectable; 
     // Start is called before the first frame update
@@ -20,11 +22,12 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) ) {
 
-            print("itemas");   
+            
+              
             
         }if (Input.GetMouseButtonDown(0)) {
             RaycastHit2D rayHit = Physics2D.GetRayIntersection(cam.ScreenPointToRay(Input.mousePosition));
-            if (rayHit.transform.CompareTag("Collectable") )
+            if (rayHit.transform.CompareTag("Collectable"))
             {
                 Debug.Log(rayHit.transform.tag);
                 inContact = true;
@@ -32,6 +35,16 @@ public class PlayerInteraction : MonoBehaviour
         }
 
     }
-  
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        var item = other.GetComponent<Item>();
+        if (item)  //other.GetComponent<Item>() auch möglich  other.CompareTag("Collectable")
+        {
+            inventory.AddItem(item.item, 1);
+            Debug.Log(item.name);
+            Destroy(other.gameObject);
+        }
+    }
+
 }
 
