@@ -1192,12 +1192,13 @@ MonoBehaviour:
   playerPosition: {fileID: 1826499612}
   rb: {fileID: 891978971}
   speed: 3
-  minRadius: 1
   MaxRadius: 10
   distance: {x: 0, y: 0}
   radiusDistance: 0
+  playerInRange: 0
   spawnPosition: {x: 0, y: 0}
-  idle: 1
+  HowLittleIdle: 4
+  random: {x: 0, y: 0}
 --- !u!50 &891978971
 Rigidbody2D:
   serializedVersion: 4
@@ -1218,7 +1219,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &891978972
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1593,7 +1594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6f3be634962d045b1bd2a6b0259281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bla: 0
+  inContact: 0
 --- !u!1001 &1999157320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1742,7 +1743,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2915921, y: 1}
+    m_SensorSize: {x: 4.9375, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1974,7 +1975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f2b9e33d900f848a5db04cf751f045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inContact: 0
   collectablepostition: {fileID: 2109742392}
   playerposition: {fileID: 1826499612}
 --- !u!114 &2109742394

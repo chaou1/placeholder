@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class basicenemymovement : MonoBehaviour
-{
+{  //basicpositions
     public Transform playerPosition;
     public Rigidbody2D rb;
+    //speed of the enemy
     public float speed;
-
+    //range of the 
     public float MaxRadius;
-    public Vector2 distance = new Vector2();
+    private Vector2 distance = new Vector2();
     public float radiusDistance;
     public bool playerInRange= false;
-    private Vector2 playerPositionv = new Vector2();
     public Vector2 spawnPosition = new Vector2();
     private Vector2 distanceToSpawn;
     private Vector2 distanceToSpawnN;
-    public bool idle = true;
-    public bool idleCooldown = false;
-    public Vector2 nullVector = new Vector2(1,1);
-    private float random;
+    private bool idle = true;
+    private bool idleCooldown = false;
+    private bool canPerform = false;
+    public float HowLittleIdle;
+    public Vector2 random;
 
 
 
@@ -37,10 +38,10 @@ public class basicenemymovement : MonoBehaviour
     }
 
     public void mainMovement() {
-        playerPositionv = playerPosition.transform.position;
+
         //distanzvektor
-        distance.x = playerPositionv.x - transform.position.x;
-        distance.y = playerPositionv.y - transform.position.y;
+        distance.x = playerPosition.position.x - transform.position.x;
+        distance.y = playerPosition.position.y - transform.position.y;
         radiusDistance = Mathf.Sqrt(distance.x * distance.x + distance.y * distance.y);
 
 
@@ -72,7 +73,7 @@ public class basicenemymovement : MonoBehaviour
 
 
         //debug line
-        Debug.DrawLine(transform.position, playerPositionv);
+        Debug.DrawLine(transform.position, playerPosition.position);
 
     }
     private void returnToSpawn()
@@ -90,18 +91,35 @@ public class basicenemymovement : MonoBehaviour
     }
     private void idleMovement() {
 
-        if (idleCooldown==false) { switch (Random.Range(1f, 3f)) {
-                case 1: StartCoroutine(noise());
+        if (idleCooldown == false) { 
+            switch (Random.Range(1,HowLittleIdle)) {
+                case 1:
+                    StartCoroutine(noise());
                     break;
-
-            } 
+                default:
+                    StartCoroutine(nothing());
+                    break;
+            }
         }
+        if (canPerform==true) {
+            rb.MovePosition(rb.position + random * speed * Time.deltaTime);
+        } 
+    
     }
     IEnumerator noise()
     {
-        rb.MovePosition(rb.position + nullVector * Random.Range(-1f, 1f));
+        random.x = Random.Range(-5f, 5f);
+        random.y = Random.Range(-5f, 5f);
+        random.Normalize();
+        canPerform = true;
         idleCooldown = true;
-        yield return new WaitForSeconds(Random.Range(3f,10f));
+        yield return new WaitForSeconds(Random.Range(0f,1f));
+        idleCooldown = false;
+        canPerform = false;
+    }
+    IEnumerator nothing() {
+        idleCooldown = true;
+        yield return new WaitForSeconds(Random.Range(3f, 5f));
         idleCooldown = false;
     }
  
