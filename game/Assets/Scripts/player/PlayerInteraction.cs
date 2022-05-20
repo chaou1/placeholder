@@ -36,7 +36,8 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (collision.CompareTag("Collectable") && inContact == true )
         {
-           print("ItemCollected")
+            print("ItemCollected");
+            Destroy(obj: collectable );
 
         }
         else

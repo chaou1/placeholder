@@ -6,7 +6,7 @@ public class collectable : MonoBehaviour
 {
     //PlayerInteraction playerinteraction;
 
-   // public bool inContact;
+   // 
     int x = 0;
     float y = 0.005f;
     public Transform collectablepostition;
