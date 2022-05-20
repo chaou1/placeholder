@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class collectable : MonoBehaviour
 {
-    //PlayerInteraction playerinteraction;
+
+   public  PlayerInteraction playerinteraction;
 
    // 
     int x = 0;
@@ -34,7 +35,7 @@ public class collectable : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") )
+        if (collision.CompareTag("Player") && playerinteraction.inContact == true)
         {
             Destroy(obj: gameObject);
         }

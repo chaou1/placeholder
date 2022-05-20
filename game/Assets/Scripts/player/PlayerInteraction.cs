@@ -12,7 +12,7 @@ public class PlayerInteraction : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        Vector3 mousePosition = Input.mousePosition;
+       
     }
 
     // Update is called once per frame
@@ -32,16 +32,6 @@ public class PlayerInteraction : MonoBehaviour
         }
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Collectable") && inContact == true )
-        {
-            print("ItemCollected");
-            Destroy(obj: collectable );
-
-        }
-        else
-        {  }
-    }
+  
 }
 
