@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 2856618698646897241}
   m_Layer: 0
   m_Name: spawnpoint (2)
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2819410810790457166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7152786, y: 2.613554, z: 0}
+  m_LocalPosition: {x: -10.0002, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -179,6 +179,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 4
   roomtemplate: {fileID: 0}
+  spawned: 0
+  offset: {x: 1.715177, y: -2.613554, z: 0}
 --- !u!1 &3269779291500973158
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3269779291500973158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.2849236, y: -2.613554, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -254,7 +256,7 @@ GameObject:
   - component: {fileID: 2820157479215346534}
   m_Layer: 0
   m_Name: spawnpoint (3)
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,7 +269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3604039780947724544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2849236, y: -7.386647, z: 0}
+  m_LocalPosition: {x: 0, y: -10.0002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -335,6 +337,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 3
   roomtemplate: {fileID: 0}
+  spawned: 0
+  offset: {x: 1.715177, y: -2.613554, z: 0}
 --- !u!1 &5869109311629626501
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +353,7 @@ GameObject:
   - component: {fileID: 1263364205262063057}
   m_Layer: 0
   m_Name: spawnpoint (1)
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -362,7 +366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5869109311629626501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.285126, y: 2.6135535, z: 0}
+  m_LocalPosition: {x: 10.0002, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -430,6 +434,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 2
   roomtemplate: {fileID: 0}
+  spawned: 0
+  offset: {x: 1.715177, y: -2.613554, z: 0}
 --- !u!1 &6843407152872592895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,7 +2716,7 @@ GameObject:
   m_Layer: 0
   m_Name: RDL
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2722,7 +2728,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9118113812927797817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.71618, y: 2.3865466, z: -0.05415424}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
