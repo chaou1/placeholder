@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480198f71fb993c4a807e333bcb09cf0, type: 3}
   m_Name: mochi
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 6846269661534067234, guid: bca899e11d7a16e4a847905c022ff8a5, type: 3}
   type: 0
   description: 
   restoredHealth: 69
