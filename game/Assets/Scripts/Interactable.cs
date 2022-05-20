@@ -13,7 +13,7 @@ public class Interactable : MonoBehaviour
     {
         if (isFocus)
         {
-            float distance = Vector3.Distance(player.position, collectable.position);
+            float distance = Vector3.Distance(player.position, transform.position);
             if(distance <= radius)
             {
                 Debug.Log("INT");
