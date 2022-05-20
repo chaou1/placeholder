@@ -1760,7 +1760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1487850015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1995,9 +1995,13 @@ MonoBehaviour:
   DialogBox: {fileID: 940035187}
   dialogText: {fileID: 162500903}
   contents: if u see dis then its wrong
+  inrange: 0
   timespoken: 0
   doneSpeaking: 1
-  Howmuch: 0
+  name: 
+  sentences:
+  - hallo
+  - 
 --- !u!61 &1791073563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2326,7 +2330,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 5.3407474, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
