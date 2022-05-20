@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class collectable : MonoBehaviour
 {
+    //PlayerInteraction playerinteraction;
+
+   // public bool inContact;
     int x = 0;
     float y = 0.005f;
     public Transform collectablepostition;
     public Transform playerposition;
+   //public  Interactable interactable;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +21,7 @@ public class collectable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
         collectablepostition.position += new Vector3(y, 0, 0);
         x++;
         if (x == 100) {
@@ -30,9 +34,9 @@ public class collectable : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") )
         {
-           Destroy(obj: gameObject);
+            Destroy(obj: gameObject);
         }
     }
 
