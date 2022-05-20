@@ -14,18 +14,29 @@ public class BasicMovement : MonoBehaviour
     public Transform playerPosition;
     bool walkingRight;
     bool walkingUp;
+    public static bool frozen= false;
+    public static bool devtools = false;
     public enum movementState {dash}
     // Start is called before the first frame update
     void start() { }
 
     private void FixedUpdate()
     {
-        Moving();
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if (frozen==false) { Moving();
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        } 
+    
     }
     // Update is called once per frame
     void Update()
-    {
+    {   if (Input.GetKeyDown(KeyCode.I) && Input.GetKeyDown(KeyCode.O) && Input.GetKeyDown(KeyCode.P)) {
+            devtools = true;
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            devtools = false;
+        }
+
         if (Input.GetKeyDown(KeyCode.LeftControl) && dashCooldown == false )
         {
             StartCoroutine(dash()); 

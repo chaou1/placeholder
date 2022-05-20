@@ -1956,7 +1956,8 @@ MonoBehaviour:
   dialogText: {fileID: 162500903}
   contents: if u see dis then its wrong
   timespoken: 0
-  dialogs: []
+  doneSpeaking: 1
+  Howmuch: 0
 --- !u!61 &1791073563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2135,6 +2136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6f3be634962d045b1bd2a6b0259281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
   inContact: 0
 --- !u!1001 &1999157320
 PrefabInstance:
