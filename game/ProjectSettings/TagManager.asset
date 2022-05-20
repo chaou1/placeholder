@@ -7,6 +7,7 @@ TagManager:
   - Collectable
   - enemy
   - wall
+  - Rooms
   layers:
   - Default
   - TransparentFX
