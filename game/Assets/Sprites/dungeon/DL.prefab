@@ -2196,7 +2196,7 @@ GameObject:
   m_Layer: 0
   m_Name: DL
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2208,7 +2208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393883934158671091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81.716774, y: 17.386848, z: -0.05415424}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2652,7 +2652,7 @@ GameObject:
   - component: {fileID: 6691892899340920236}
   m_Layer: 0
   m_Name: spawnpoint (3)
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2665,7 +2665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5330371348036460490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2849236, y: -7.386647, z: 0}
+  m_LocalPosition: {x: 0, y: -10.0002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2733,6 +2733,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 3
   roomtemplate: {fileID: 0}
+  spawned: 0
+  offset: {x: 1.715177, y: -2.613554, z: 0}
 --- !u!1 &6241357530484578988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,7 +2759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6241357530484578988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.2849236, y: -2.613554, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2810,7 +2812,7 @@ GameObject:
   - component: {fileID: 6654606077691188371}
   m_Layer: 0
   m_Name: spawnpoint (2)
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2823,7 +2825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6691742510427519364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7152786, y: 2.613554, z: 0}
+  m_LocalPosition: {x: -10.0002, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2891,6 +2893,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 4
   roomtemplate: {fileID: 0}
+  spawned: 0
+  offset: {x: 1.715177, y: -2.613554, z: 0}
 --- !u!1 &7648302012158438811
 GameObject:
   m_ObjectHideFlags: 0
