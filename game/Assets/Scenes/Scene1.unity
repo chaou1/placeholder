@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3996315553629573718, guid: bf18cbe3d1e2f2b40b8e689a6de0c0d8, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 9003212573591767246, guid: bf18cbe3d1e2f2b40b8e689a6de0c0d8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -970,6 +974,7 @@ MonoBehaviour:
   - {fileID: 1971682449431353532, guid: ccf128bb4f6b07a42b21c3c69383c456, type: 3}
   - {fileID: 1971682449431353532, guid: ccf128bb4f6b07a42b21c3c69383c456, type: 3}
   - {fileID: 1971682449431353532, guid: ccf128bb4f6b07a42b21c3c69383c456, type: 3}
+  closedroom: {fileID: 3847037490159544967, guid: 5b8b11e06e1d7674aac85e07357f972e, type: 3}
 --- !u!4 &559904671
 Transform:
   m_ObjectHideFlags: 0
@@ -1760,7 +1765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1487850015
 RectTransform:
   m_ObjectHideFlags: 0
