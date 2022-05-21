@@ -1745,6 +1745,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de2b26c725714d04aba718ebd5705714, type: 3}
+--- !u!1 &1385558629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1581856058656702526, guid: de2b26c725714d04aba718ebd5705714, type: 3}
+  m_PrefabInstance: {fileID: 1581856057550869678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1385558630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385558629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec2f136a2887ab4792955d2e90d3a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
 --- !u!1 &1451669221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7622343800143960352, guid: bf444206b530fc445a27118f4deac93a, type: 3}
@@ -2312,7 +2330,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 2.2826476, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2458,6 +2476,8 @@ GameObject:
   - component: {fileID: 2109742397}
   - component: {fileID: 2109742395}
   - component: {fileID: 2109742396}
+  - component: {fileID: 2109742398}
+  - component: {fileID: 2109742399}
   m_Layer: 0
   m_Name: collactable
   m_TagString: Collectable
@@ -2623,6 +2643,34 @@ MonoBehaviour:
   radius: 5
   player: {fileID: 1826499612}
   collectable: {fileID: 2109742392}
+--- !u!114 &2109742398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109742390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51bd2295d86f72146a272b1158fac63a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: d3a54a8412aa27e40babcf67f75ac849, type: 2}
+--- !u!114 &2109742399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109742390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b73d84c0df480419e47e65db2ca66a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+  player: {fileID: 0}
+  collectable: {fileID: 0}
 --- !u!1001 &1581856057550869678
 PrefabInstance:
   m_ObjectHideFlags: 0
