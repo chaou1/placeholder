@@ -1883,7 +1883,6 @@ GameObject:
   - component: {fileID: 1791073557}
   - component: {fileID: 1791073563}
   - component: {fileID: 1791073561}
-  - component: {fileID: 1791073562}
   m_Layer: 0
   m_Name: test_npc
   m_TagString: Untagged
@@ -1984,29 +1983,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.804661, y: 1.28613}
   m_EdgeRadius: 0
---- !u!114 &1791073562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791073556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4d59f2b12b40945821f53a06e1f983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boxCollider: {fileID: 1791073561}
-  DialogBox: {fileID: 940035187}
-  dialogText: {fileID: 162500903}
-  contents: if u see dis then its wrong
-  inrange: 0
-  timespoken: 0
-  doneSpeaking: 1
-  name: 
-  sentences:
-  - hallo
-  - 
 --- !u!61 &1791073563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2336,7 +2312,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2826476, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
